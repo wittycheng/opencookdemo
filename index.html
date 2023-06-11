@@ -1,0 +1,44 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <title>Photo Viewer</title>
+  <script src="script.js"></script>
+</head>
+<body>
+  <button onclick="startSlideshow()">Start Slideshow</button>
+  <button onclick="stopSlideshow()">Stop Slideshow</button>
+  <div id="photoContainer">
+
+    <img id="currentPhoto" src="" alt="Current Photo">
+  </div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <title>Photo Viewer</title>
+  <script src="script.js"></script>
+</head>
+<body>
+  <div id="folder-select">
+    <label for="folder">Select Folder:</label>
+    <select id="folder" onchange="changeFolder()">
+      <option value="folder1">Folder 1</option>
+      <option value="folder2">Folder 2</option>
+      <option value="folder3">Folder 3</option>
+      <!-- Add more options for each folder -->
+    </select>
+  </div>
+
+  <button onclick="startSlideshow()">Start Slideshow</button>
+  <button onclick="stopSlideshow()">Stop Slideshow</button>
+  
+  <div id="photoContainer">
+    <img id="currentPhoto" src="" alt="Current Photo">
+  </div>
+  <p id="photoDescription"></p>
+</body>
+</html>
