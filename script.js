@@ -1,7 +1,10 @@
 var folders = [
-    'folder1',
-    'folder2',
-    'folder3',
+    'crampedroom_gptagent_blue_bcagent_green_play1',
+    'crampedroom_gptagent_green_bcagent_blue_play1',
+    'crampedroom_gptagent_blue_greedyagent_green_play1',
+    'crampedroom_gptagent_green_greedyagent_blue_play1',
+    'crampedroom_gptagent_blue_randomagent_green_play1',
+    'crampedroom_gptagent_green_randomagent_blue_play1'
 ];
 var currentFolderIndex = 0; // Current folder index
 var currentIndex = 1;       // Current photo index
