@@ -7,7 +7,7 @@ var folders = [
     'crampedroom_gptagent_green_randomagent_blue_play1'
 ];
 var currentFolderIndex = 0; // Current folder index
-var currentIndex = 1;       // Current photo index
+var currentIndex = 0;       // Current photo index
 var slideshowInterval;      // Interval for the slideshow
 
 function startSlideshow() {
@@ -15,7 +15,7 @@ function startSlideshow() {
     stopSlideshow();
 
     // Set the interval to refresh the photo container at 6 fps
-    slideshowInterval = setInterval(refreshPhoto, 1000 / 6);
+    slideshowInterval = setInterval(refreshPhoto, 1000 / 2);
 }
 
 function stopSlideshow() {
@@ -30,8 +30,8 @@ function refreshPhoto() {
     document.getElementById("photoDescription").textContent = currentFolder + '/descriptions/' + currentIndex + '.txt';
     // Increment the current index and loop back to the beginning if necessary
     currentIndex++;
-    if (currentIndex > 400) {
-        currentIndex = 1;
+    if (currentIndex > 399) {
+        currentIndex = 0;
         clearInterval(slideshowInterval);
         return;
     }
@@ -41,7 +41,7 @@ function changeFolder() {
     // Get the selected folder index from the dropdown
     var folderSelect = document.getElementById("folder");
     currentFolderIndex = folderSelect.selectedIndex;
-    currentIndex = 1; // Reset the current index when changing folders
+    currentIndex =0; // Reset the current index when changing folders
     
     // Refresh the photo immediately when changing folders
     refreshPhoto();
